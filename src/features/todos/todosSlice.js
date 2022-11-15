@@ -5,11 +5,11 @@ const todosSlice = createSlice({
   initialState: {
     entities: [], // array of todos
   },
-  reducers: {
-    todoAdded(state, action) {
-      // update meeee
-    },
-  },
+  todoAdded(state, action) {
+    // using createSlice lets us mutate state!
+    state.entities.push(action.payload);
+  }, 
+  
 });
 
 export const { todoAdded } = todosSlice.actions;
